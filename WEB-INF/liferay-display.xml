@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+ <display>
+ 	<category name="category.rssAggregator">
+ 	<!-- <category name="category.rssAggregator"> -->
+ 		<portlet id="rssAggregator" />
+ 	</category>
+ </display>

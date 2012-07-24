@@ -1,0 +1,40 @@
+{
+	"urlTitle":	"test-json-article",
+	"indexable":	true,
+	"statusDate":	"",
+	"type":	"general",
+	"smallImageId":	36387,
+	"articleId":	"60000",
+	"version":	1,
+	"id":	36385,
+	"title":	"Test JSON Article",
+	"description":	"Test JSON Description",
+	"userId":	36201,
+	"userName":	"RSS Aggregator",
+	"smallImage":	false,
+	"createDate":	"1307992138426",
+	"displayDate":	"1310501280000",
+	"smallImageURL":	"",
+	"expirationDate":	"1311192480000",
+	"status":	2,
+	"statusByUserName":	"",
+	"reviewDate":	"1311192480000",
+	"modifiedDate":	"1307992138426",
+	"content":	"
+		<?xml version='1.0' encoding='UTF-8'?>
+		<root available-locales=\"en_US\" default-locale=\"en_US\">
+			<static-content language-id=\"en_US\">
+				<![CDATA[
+					<p>\n\ttest content<\/p>
+				]]>
+			<\/static-content>
+		<\/root>
+	",
+	"templateId":	"",
+	"groupId":	10156,
+	"resourcePrimKey":	36386,
+	"structureId":	"",	
+	"statusByUserId":	0,
+	"companyId":	10131,		
+	"uuid":	"ffa013e2-d006-4a53-a6e9-6f4677956a42"
+}

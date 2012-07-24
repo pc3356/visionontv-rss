@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- ############################################################################### -->
+    <!-- ########################### STDOUT APPENDER ################################### -->
+    <!-- ############################################################################### -->
+
+    <appender name="out" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd, HH:mm:ss} %-5p %t %x - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- ############################################################################### -->
+    <!-- ############################ FILE APPENDER #################################### -->
+    <!-- ############################################################################### -->
+
+    <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="{catalina.base}/logs/rss_aggregator.log"/>
+        <param name="MaxBackupIndex" value="50"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd, HH:mm:ss} %-5p %c - %m%n"/>
+            <!--<param name="DatePattern" value=".yyyy_MM_dd"/>-->
+        </layout>
+    </appender>
+
+    <!-- ############################################################################### -->
+    <!-- ################################# LOGGERS ##################################### -->
+    <!-- ############################################################################### -->
+
+	<logger name="com.visionon.rss">
+		<level value="info"/>
+	</logger>
+    
+
+    <!-- ############################################################################### -->
+    <!-- #################### Uncomment to debug Hibernate stuff #######################-->
+    <!-- ############################################################################### -->
+    <!--<logger name="org.hibernate">
+		<level value="debug"/>
+	</logger>-->
+
+	<root>
+		<priority value="warn"/>
+		<appender-ref ref="fileAppender"/>
+	</root>
+
+</log4j:configuration>
