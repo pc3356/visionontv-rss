@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.visionon.rss.util;
+package tv.visionon.rss.util;
 
 
 import org.junit.After;

@@ -1,4 +1,4 @@
-package com.visionon.rss.service;
+package tv.visionon.rss.service;
 
 
 import java.net.URI;

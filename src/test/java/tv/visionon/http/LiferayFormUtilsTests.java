@@ -1,4 +1,4 @@
-package com.visionon.http;
+package tv.visionon.http;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
