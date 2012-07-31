@@ -39,8 +39,8 @@ import tv.visionon.http.LoginForm;
 public class ArticlePoster {
 
 	private String userName = "rss"; // won't be used for now
-	private String userEmail = "pjcoates1976@gmail.com";
-	private String password = "GU3bh6Y6";
+	private String userEmail = "someone@visionon.tv";
+	private String password = "";
 	private String baseUrl = "http://92.239.225.98";
 	private String loginPath = "/c/portal/login";
 	private String logoutPath = "/c/portal/logout";
