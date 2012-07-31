@@ -4,6 +4,7 @@
 package tv.visionon.rss.domain;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -18,6 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
 
 /**
  * @author administrator
@@ -40,15 +42,10 @@ public class EntryMetaInfo implements Serializable {
 	private FeedMetaInfo feed;
 	private String uri;
 	private String description; // Content
-	//@OneToMany()
-	//private List<String> contents;
-	
-	//@ManyToMany()
-	//private List<Tag> tags;
+
 		
 	public EntryMetaInfo() {
-		//tags = new ArrayList<Tag>();
-		//contents = new ArrayList<String>();
+
 	}
 	
 	public String getTitle() {
@@ -98,34 +95,7 @@ public class EntryMetaInfo implements Serializable {
 	public Long getId() {
 		return id;
 	}
-	
-//	public List<Tag> getTags() {
-//		return tags;
-//	}
-//	
-//	public void addTag(Tag tag) {
-//		if(!tags.contains(tag)) {
-//			tags.add(tag);
-//		}
-//	}
-//	
-//	public void setTags(List<Tag> tags) {
-//		this.tags = tags;
-//	}
-	
-//	public List<String> getContents() {
-//		return contents;
-//	}
-//	
-//	public void addContent(String content) {
-//		if(!contents.contains(content)) {
-//			contents.add(content);
-//		}
-//	}
-//	
-//	public void setContents(List<String> contents) {
-//		this.contents = contents;
-//	}
+
 	
 	public String getDescription() {
 		return description;
@@ -135,20 +105,11 @@ public class EntryMetaInfo implements Serializable {
 		this.description = description;
 	}
 
-	public boolean equals(Object obj) {
-		if(obj instanceof EntryMetaInfo) {			
-			EntryMetaInfo that = (EntryMetaInfo)obj;
-			return new EqualsBuilder()
-				.append(this.publishedDate, that.publishedDate)
-				.append(this.title, that.title)
-				.append(this.updatedDate, that.updatedDate)
-				.append(this.uri, that.uri)
-				.append(this.description, that.description)
-				//.append(this.tags, that.tags)
-				//.append(this.contents, that.contents)
-				.isEquals();
-			
-		}
-		return false;
+	public boolean equals(Object that) {
+		return EqualsBuilder.reflectionEquals(this, that, Arrays.asList("id"));
 	}
+
+    public int hashCode() {
+        return HashCodeBuilder.reflectionHashCode(this);
+    }
 }

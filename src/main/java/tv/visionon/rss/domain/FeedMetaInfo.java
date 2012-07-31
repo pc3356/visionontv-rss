@@ -3,10 +3,7 @@ package tv.visionon.rss.domain;
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -125,8 +122,8 @@ public class FeedMetaInfo implements Serializable {
 		}		
 	}
 	
-	public boolean equals(Object anObj) {
-		return EqualsBuilder.reflectionEquals(this, anObj);
+	public boolean equals(Object that) {
+		return EqualsBuilder.reflectionEquals(this, that, Arrays.asList("id"));
 	}
 	
 	public int hashCode() {
