@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package tv.visionon.rss.service;
 
@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 
@@ -28,16 +29,15 @@ public class FeedReaderServiceImplTests
 	private FeedReaderServiceImpl service;
 	@Mock
 	private FeedDao feedDao;
-	
+
 	@Before
-	public void setUp()
-	{
+	public void setUp() {
 		service = new FeedReaderServiceImpl(feedDao);
 	}
-	
+
 	@Test
-	public void shouldLoadSingleFeed() throws Exception
-	{
+    @Ignore
+	public void shouldLoadSingleFeed() throws Exception {
 		List<URL> urlList = Collections.singletonList(new URL("http://globalviews.mirocommunity.org/feeds/featured/"));
 		List<SyndFeed> actual = service.loadFeeds(urlList);
 		assertEquals(1, actual.size());
