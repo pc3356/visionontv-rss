@@ -42,11 +42,11 @@ public class NewArticleServiceImplTests {
 		URI ok = new URI("http://some/other/uri/denoting/success");
 		
 		EntryMetaInfo entry = new EntryMetaInfo();
-		entry.setId(Long.valueOf(2L));
+		entry.setId(2L);
 		entry.setTitle("A new entry");
 		
 		FeedMetaInfo feed = new FeedMetaInfo();
-		feed.setId(Long.valueOf(1));
+		feed.setId(1L);
 		feed.setTitle("A test feed");
 		entry.setFeed(feed);
 		feed.addEntry(entry);

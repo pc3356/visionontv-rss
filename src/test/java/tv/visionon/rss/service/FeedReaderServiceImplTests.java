@@ -48,13 +48,13 @@ public class FeedReaderServiceImplTests
 		System.out.println("Link: " + feed.getLink());
 		System.out.println("URI: " + feed.getUri());
 		System.out.println("Type: " + feed.getFeedType());
-		for(int i = 0; i < entries.size(); i++)
-		{
-			SyndEntry entry = (SyndEntry)entries.get(i);
-			System.out.println("Title: " + entry.getTitle().trim());
-			System.out.println("Link: " + entry.getLink().trim());
-			System.out.println("Uri: " + entry.getUri().trim());
-			System.out.println("UpdatedDate: " + entry.getUpdatedDate());
-		}
+
+        for (Object entry1 : entries) {
+            SyndEntry entry = (SyndEntry) entry1;
+            System.out.println("Title: " + entry.getTitle().trim());
+            System.out.println("Link: " + entry.getLink().trim());
+            System.out.println("Uri: " + entry.getUri().trim());
+            System.out.println("UpdatedDate: " + entry.getUpdatedDate());
+        }
 	}
 }
