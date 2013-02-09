@@ -20,16 +20,14 @@
 	"statusByUserName":	"",
 	"reviewDate":	"1311192480000",
 	"modifiedDate":	"1307992138426",
-	"content":	"
-		<?xml version='1.0' encoding='UTF-8'?>
-		<root available-locales=\"en_US\" default-locale=\"en_US\">
-			<static-content language-id=\"en_US\">
-				<![CDATA[
-					<p>\n\ttest content<\/p>
-				]]>
-			<\/static-content>
-		<\/root>
-	",
+	"content":	[
+        "<?xml version='1.0' encoding='UTF-8'?>",
+		"<root available-locales=\"en_US\" default-locale=\"en_US\">",
+			"<static-content language-id=\"en_US\">",
+				"<![CDATA[<p>\n\ttest content<\/p>]]>",
+			"<\/static-content>",
+		"<\/root>"
+	],
 	"templateId":	"",
 	"groupId":	10156,
 	"resourcePrimKey":	36386,
