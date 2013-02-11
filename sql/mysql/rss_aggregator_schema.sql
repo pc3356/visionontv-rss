@@ -3,12 +3,12 @@ create database rss_aggregator; /* UTF8 */
 create table rss_aggregator.feed (
 	id bigint auto_increment primary key,
 	short_name varchar(255) not null,
-  	title varchar(255) not null,
+  title varchar(255) not null,
 	link varchar(255) not null,
 	uri varchar(255) not null,
 	feed_type varchar(255),
 	encoding varchar(10),
-	published_date date;
+	published_date date,
 	active boolean not null default true,
 	added timestamp
 );
